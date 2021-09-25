@@ -17,7 +17,6 @@ namespace CrudProverTech.Models.ViewModels
         [Display(Name="Usuário:")]
         [Required(ErrorMessage = "Campo obrigatório!")]
         public string NomeUsuario { get; set; }
-        [Remote("ValidaData", "Pessoas")]
         public int Idade { get; set; }
         [Required(ErrorMessage = "Campo obrigatório!")]
         [DataType(DataType.EmailAddress)]
