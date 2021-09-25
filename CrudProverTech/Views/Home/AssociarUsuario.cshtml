@@ -1,0 +1,15 @@
+﻿@model CrudProverTech.Models.ViewModels.UsuariosRolesViewModel
+
+<h3>Associar Usuário</h3>
+
+<form asp-action="AssociarUsuario" asp-controller="Home">
+    <div>
+        <label asp-for="UsuarioId"></label>
+        <select asp-for="UsuarioId" asp-items="ViewBag.UsuarioId"></select>
+    </div>
+    <div>
+        <label asp-for="NivelAcessoId"></label>
+        <select asp-for="NivelAcessoId" asp-items="ViewBag.NivelAcessoId"></select>
+    </div>
+    <input type="submit" value="Adicionar" />
+</form>

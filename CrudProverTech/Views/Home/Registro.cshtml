@@ -1,0 +1,71 @@
+﻿@model CrudProverTech.Models.ViewModels.RegistroViewModel
+@{
+    ViewData["Title"] = "Registro";
+}
+
+<h2>Registro</h2>
+<hr />
+
+<div class="alert-warning">
+    <p>
+        O campo senha deve ter:
+    </p>  
+    <ul>
+        <li>
+            Minimo de 8 caracteres.
+        </li>
+        <li>
+            Ao menos uma letra maiíscula.
+        </li>
+        <li>
+            Ao menos uma letra minuscula.
+        </li>
+        <li>
+            E um caractere especial.
+        </li>
+    </ul>    
+    
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Registro" asp-controller="Home">
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label"></label>
+                <input asp-for="Nome" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Sobrenome" class="control-label"></label>
+                <input asp-for="Sobrenome" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="NomeUsuario" class="control-label"></label>
+                <input asp-for="NomeUsuario" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Idade" class="control-label"></label>
+                <input asp-for="Idade" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Senha" class="control-label"></label>
+                <input asp-for="Senha" class="form-control" />
+                <span asp-validation-for="Senha" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Registrar" />
+                <a asp-action="Login" asp-controller="Home">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
