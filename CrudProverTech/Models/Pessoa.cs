@@ -16,12 +16,14 @@ namespace CrudProverTech.Models
         public string Telefone { get; set; }
         [Remote("ValidaData", "Pessoas")]
         [DataType(DataType.Date)]
+        [Display(Name = "Data de Nascimento")]
         public DateTime DataNascimento { get; set; }
         [Range(1, 100, ErrorMessage = "Você não é tão velho assim")]
         public int Idade { get; set; }
         public SexoEnum Sexo { get; set; }
         public bool Ativo { get; set; }
         public Cargo Cargo { get; set; }
+        [Display(Name ="Cargo")]
         public int CargoId { get; set; }
     }
 }

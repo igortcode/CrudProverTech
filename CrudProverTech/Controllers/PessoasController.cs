@@ -79,7 +79,7 @@ namespace CrudProverTech.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CargoId"] = new SelectList(_context.Set<Cargo>(), "Id", "Id", pessoa.CargoId);
+            ViewData["CargoId"] = new SelectList(_context.Set<Cargo>(), "Id", "Nome", pessoa.CargoId);
             return View(pessoa);
         }
 
@@ -96,7 +96,7 @@ namespace CrudProverTech.Controllers
             {
                 return NotFound();
             }
-            ViewData["CargoId"] = new SelectList(_context.Set<Cargo>(), "Id", "Id", pessoa.CargoId);
+            ViewData["CargoId"] = new SelectList(_context.Set<Cargo>(), "Id", "Nome", pessoa.CargoId);
             return View(pessoa);
         }
 
@@ -132,7 +132,7 @@ namespace CrudProverTech.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CargoId"] = new SelectList(_context.Set<Cargo>(), "Id", "Id", pessoa.CargoId);
+            ViewData["CargoId"] = new SelectList(_context.Set<Cargo>(), "Id", "Nome", pessoa.CargoId);
             return View(pessoa);
         }
 
